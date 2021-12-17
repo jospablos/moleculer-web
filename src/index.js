@@ -1052,7 +1052,7 @@ module.exports = {
 				res.setHeader("Access-Control-Allow-Origin", origin);
 				res.setHeader("Vary", "Origin");
 			} else {
-				throw new ForbiddenError(ERR_ORIGIN_NOT_ALLOWED);
+				throw new ForbiddenError(ERR_ORIGIN_NOT_ALLOWED, origin);
 			}
 
 			// Access-Control-Allow-Credentials
